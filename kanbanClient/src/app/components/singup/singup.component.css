@@ -1,0 +1,45 @@
+.login-content{
+    background: #f2f2f2;
+    width: fit-content;
+    padding: 50px;
+    margin: auto;
+    margin-top: 25px;
+    border-radius: 23px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 
+}
+.login-fields{
+    padding-top: 30px;
+    border-top: 1px solid #b1b1b1;
+}
+
+.login-fields .email-id, .password{
+    background: inherit;
+    border: none;
+    border-bottom: 1px solid #8c8686;
+    width: 100%;
+    margin-bottom: 54px;
+    outline: none;
+}
+.login-fields label{
+    font-size: 20px;
+    font-weight: bold;
+}
+.login-btn button{
+    background: #4040ff;
+    border: none;
+    color: white;
+    padding-top: 7px;
+    padding-bottom: 6px;
+    padding-left: 50px;
+    padding-right: 50px;
+    font-weight: bold;
+    border-radius: 3px;
+    margin: auto;
+    width: 100%;
+}
+.login-content p{
+    margin-top: 40px;
+    font-weight: bold;
+    font-size: 17px;
+    letter-spacing: 2px;
+}

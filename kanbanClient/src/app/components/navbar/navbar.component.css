@@ -1,0 +1,14 @@
+.ml-auto{
+    margin-left: auto;
+}
+.login-button{
+    background: #4040ff;
+    border: none;
+    color: white;
+    padding-top: 7px;
+    padding-bottom: 6px;
+    padding-left: 50px;
+    padding-right: 50px;
+    font-weight: bold;
+    border-radius: 3px;
+}

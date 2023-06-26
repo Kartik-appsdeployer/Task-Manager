@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-content">
+            <h1>Login to your accout</h1>
+            <div class="login-fields">
+                <div class="login-email">
+                    <label for="email">EmailId</label><br>
+                    <input type="text" [(ngModel)]="email" class="email-id">
+                </div>
+                <div class="login-password">
+                    <label for="email">Password</label><br>
+                    <input type="password" [(ngModel)]="password" class="password">
+                </div>
+                <div class="login-btn">
+                    <button (click)="onLogin()">Login</button>
+                </div>
+            </div>
+            <p>Don't have any account? <a routerLink="/signup">SignUp</a></p>
+        </div>
+    </div>
+</body>
+</html>
