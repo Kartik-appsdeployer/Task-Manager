@@ -7,8 +7,8 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class AuthService {
-  private employeesSubject = new BehaviorSubject<any[]>([]);
-  employees$ = this.employeesSubject.asObservable();
+  // private employeesSubject = new BehaviorSubject<any[]>([]);
+  // employees$ = this.employeesSubject.asObservable();
 
   constructor(private http: HttpClient) {   }
   Register(Obj: any): Observable<any> {

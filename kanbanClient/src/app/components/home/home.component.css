@@ -1,0 +1,23 @@
+body{
+    overflow-x: scroll;
+    margin: 0;
+    margin-left: -70px;
+}
+.bucket-container{
+    margin-top: 29px;
+    margin-left: 56px;
+    display: flex;
+}
+.bucket-add{
+    margin-left: 56px;
+    background: white;
+    font-weight: bold;
+    border-radius: 11px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    width: 245px;
+    font-size: 18px;
+    border: 0.4px solid #aea9a9;
+    background: #4747fc;
+    color: white;
+}

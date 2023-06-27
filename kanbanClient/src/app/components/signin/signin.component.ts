@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { AuthService } from 'src/app/services/auth.service';
 import { Router } from '@angular/router';
+import jwt_decode from 'jwt-decode';
 
 @Component({
   selector: 'app-signin',
@@ -14,6 +15,7 @@ export class SigninComponent {
   myObj: any = {};
   visible: boolean = false;
   Success: any;
+  decodedToken: any;
   message: any = "";
 
   onLogin(){
@@ -29,6 +31,9 @@ export class SigninComponent {
         setTimeout(() => {
           this.visible = false;
         }, 3000)
+        const Token = res.Token
+        this.decodedToken = jwt_decode(Token);
+        localStorage.setItem("UserId", this.decodedToken.user.id);
         this.email = ""
         this.password = ""
         this.message = res.message

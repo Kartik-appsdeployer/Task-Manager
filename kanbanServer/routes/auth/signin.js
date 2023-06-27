@@ -3,6 +3,7 @@ const router = express.Router()
 const bcryptjs = require("bcryptjs");
 const AuthDB = require('../../models/user');
 const jwt = require("jsonwebtoken");
+const { Configuration, OpenAIApi } = require("openai");
 
 
 router.post('/', async (req, res) => {

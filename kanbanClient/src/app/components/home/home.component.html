@@ -1,1 +1,36 @@
-<p>home works!</p>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="bucket-container">
+        <app-bucket [data]="result.Data"></app-bucket>
+        <div class="add-bucket">
+            <button class="bucket-add" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="fa fa-plus" style="margin-left: 10px; margin-top: 7px;" aria-hidden="true"></i>Add a Bucket</button>
+        </div>
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel" style="font-weight: bold;letter-spacing: 2px;">Modal title</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <input class="form-control" type="text" [(ngModel)]="bucketName" placeholder="Enter Bucket Name" aria-label="default input example">
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                  <button type="button" class="btn btn-primary" data-bs-dismiss="modal" (click)="addBucket()">Add Bucket</button>
+                </div>
+              </div>
+            </div>
+          </div>
+    </div>
+</body>
+
+</html>
