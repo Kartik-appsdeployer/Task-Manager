@@ -2,40 +2,53 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
 </head>
 
 <body>
-    <div class="home-container container-fluid">
-        <div class="home-bucket" *ngFor="let item of childObject">
-          <div class="bucket-heading">
-            <h1 class="bucket-name">{{ item.bucketName }}</h1>
-            <div class="menu-nav">
-              <div class="dropdown-container" tabindex="-1">
-                <div class="three-dots"></div>
-                <div class="dropdown">
-                  <a href="#">
-                    <div>dropdown 1</div>
-                  </a>
-                  <a href="#">
-                    <div>dropdown 2</div>
-                  </a>
-                  <a href="#">
-                    <div>dropdown 3</div>
-                  </a>
-                </div>
+  <div class="home-container container-fluid">
+    <div class="home-bucket" *ngFor="let item of childObject; let i = index">
+      <div class="bucket-heading">
+        <h1 class="bucket-name">{{ item.bucketName }}</h1>
+        <div class="menu-nav">
+          <i class="fa fa-trash delete" (click)="deleteCard(item._id)" aria-hidden="true"></i>
+        </div>
+        <div class="modal fade" [id]="'exampleModal2-' + i" tabindex="-1" aria-labelledby="exampleModalLabel"
+          aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel"
+                  style="font-weight: bold; letter-spacing: 2px;">Add Task Name</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <input class="form-control" type="text" [(ngModel)]="cardName" placeholder="Enter Task Name"
+                  aria-label="default input example">
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-primary" data-bs-dismiss="modal"
+                  (click)="addTask(item._id)">Add Task</button>
               </div>
             </div>
           </div>
-          <!-- <app-cards></app-cards> -->
-          <div class="bucket-task">
-            <button class="add-task">Add Task<i class="fa fa-plus" style="margin-left: 10px; margin-top: 7px;" aria-hidden="true"></i></button>
-          </div>
         </div>
       </div>
-      
+      <div class="bucket-cards" *ngFor="let item1 of item.cards">
+        <div class="tasks">
+          <p>{{ item1.cardName }}</p>
+          
+        </div>
+    </div>   
+      <div class="bucket-task">
+        <button class="add-task" data-bs-toggle="modal" [attr.data-bs-target]="'#exampleModal2-' + i">Add Task<i
+            class="fa fa-plus" style="margin-left: 10px; margin-top: 7px;" aria-hidden="true"></i></button>
+      </div>
+    </div>
+  </div>
 </body>
 
 </html>

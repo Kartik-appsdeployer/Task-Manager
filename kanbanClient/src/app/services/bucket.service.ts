@@ -18,6 +18,8 @@ export class BucketService {
     return this.http.get("http://localhost:3000/api/bucket/getAllBuckets")
   }
 
-  
+  DeleteBucket(ID: any):Observable<any>{
+    return this.http.delete(`http://localhost:3000/api/bucket/deleteBucket/${ID}`)
+  }
 
 }

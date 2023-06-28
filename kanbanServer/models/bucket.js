@@ -13,10 +13,16 @@ const Bucket = Schema({
     userId: {
         type: mongoose.Types.ObjectId,
     },
-    cards: [{ 
-        type: mongoose.Types.ObjectId, 
-        ref: "cards" 
-    }],
+    cards: [
+        {
+          cardName: {
+            type: String
+          },
+          cardId: {
+            type: mongoose.Types.ObjectId
+          }
+        }
+      ]
 
 })
 

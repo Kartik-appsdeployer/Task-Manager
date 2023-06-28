@@ -16,10 +16,13 @@
                 aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div class="collapse navbar-collapse" *ngIf="userName === null" id="navbarSupportedContent">
                 <div class="ml-auto">
                     <button class="login-button" routerLink="signin">Login</button>
                 </div>
+            </div>
+            <div class="username-div">
+                <h4 class="username" style="color: white; margin-top: 11px;">Welcome, {{userName}}</h4>
             </div>
         </div>
     </nav>

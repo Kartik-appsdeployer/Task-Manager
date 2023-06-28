@@ -10,7 +10,6 @@ import appRoutes from './routerConfig';
 import { FormsModule } from '@angular/forms';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { HomeComponent } from './components/home/home.component';
-import { CardsComponent } from './components/cards/cards.component';
 import { BucketComponent } from './components/bucket/bucket.component';
 
 @NgModule({
@@ -20,7 +19,6 @@ import { BucketComponent } from './components/bucket/bucket.component';
     SingupComponent,
     NavbarComponent,
     HomeComponent,
-    CardsComponent,
     BucketComponent
   ],
   imports: [

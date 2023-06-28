@@ -34,6 +34,7 @@ export class SigninComponent {
         const Token = res.Token
         this.decodedToken = jwt_decode(Token);
         localStorage.setItem("UserId", this.decodedToken.user.id);
+        localStorage.setItem("UserName", this.decodedToken.user.name);
         this.email = ""
         this.password = ""
         this.message = res.message
