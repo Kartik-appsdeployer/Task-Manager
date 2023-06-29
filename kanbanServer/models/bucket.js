@@ -20,6 +20,9 @@ const Bucket = Schema({
           },
           cardId: {
             type: mongoose.Types.ObjectId
+          },
+          cardDesc: {
+            type: String
           }
         }
       ]

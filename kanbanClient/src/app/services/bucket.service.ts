@@ -22,4 +22,9 @@ export class BucketService {
     return this.http.delete(`http://localhost:3000/api/bucket/deleteBucket/${ID}`)
   }
 
+  AddDescription(OBJ:any):Observable<any>{
+    return this.http.put(`http://localhost:3000/api/bucket/addDescription`, OBJ)
+  }
+
+
 }
